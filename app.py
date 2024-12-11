@@ -45,6 +45,8 @@ class CarbonFootprintApp:
         try:
     
             df = pd.read_csv(r'final_dataset.csv')
+            df = df.dropna()
+        
             
             # Prepare features
             df['transport_modes_used'] = (
